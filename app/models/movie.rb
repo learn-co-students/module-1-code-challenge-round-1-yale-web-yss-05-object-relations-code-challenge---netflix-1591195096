@@ -17,6 +17,7 @@ class Movie
   end
 
   def average_rating()
+    return 0 if reviews().empty?
     rating_sum().to_f/reviews().count
   end
 
