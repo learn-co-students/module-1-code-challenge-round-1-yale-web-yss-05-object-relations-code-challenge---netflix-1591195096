@@ -1,8 +1,10 @@
 # require the Bundler module
-require 'bundler/setup'
+# require 'bundler/setup'
 
 # require all gems defined in the Gemfile
-Bundler.require
+# Bundler.require
+require 'pry'
+require 'require_all'
 
 # require all files in the top-level app directory
 require_rel '../app'
