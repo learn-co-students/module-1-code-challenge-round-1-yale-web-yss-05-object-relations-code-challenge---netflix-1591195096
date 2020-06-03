@@ -24,7 +24,7 @@ class Viewer
   def rate_movie(movie, rating)
     if reviewed_movie?(movie)
       find_review_by_movie(movie).rating = rating
-    else Review.new(self, movie, rating)
+    else new_review(movie, rating)
     end
   end
 
@@ -32,9 +32,13 @@ class Viewer
     @@all
   end
 
-  # helper methods
+  # additional helper methods
   def find_review_by_movie(movie)
     reviews.find{|review| review.movie == movie}
+  end
+
+  def new_review(movie, rating)
+    Review.new(self, movie, rating)
   end
   
 end

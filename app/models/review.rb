@@ -1,4 +1,5 @@
 class Review
+    # deliverables
     attr_reader :movie, :viewer
     attr_accessor :rating
 
