@@ -22,6 +22,8 @@ class Viewer
 
   def get_movie_review(movie)
     reviews.find {|review| review.movie == movie}
+
+    # useful helper method for reviewed_movie?, rate_movie
   end
 
   def reviewed_movie?(movie)
