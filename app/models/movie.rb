@@ -16,16 +16,16 @@ class Movie
     reviews().map{|review| review.viewer}.uniq
   end
 
-   def average_rating()
+  def average_rating()
     rating_sum().to_f/reviews().count
-  end
-
-  def self.highest_rated()
-    all().max_by{|movie| movie.average_rating()}
   end
 
   def self.all
     @@all
+  end
+
+  def self.highest_rated()
+    all().max_by{|movie| movie.average_rating()}
   end
 
   private 

@@ -8,10 +8,6 @@ class Viewer
     self.class.all << self
   end
 
-  def rate_movie(movie, rating)
-    Review.new(self, movie, rating)
-  end
-
   def reviews()
     Review.all().select{|review| review.viewer == self}
   end
@@ -22,6 +18,10 @@ class Viewer
 
   def reviewed_movie?(movie)
     reviewed_movies.include?(movie)
+  end
+  
+  def rate_movie(movie, rating)
+    Review.new(self, movie, rating)
   end
 
   def self.all
