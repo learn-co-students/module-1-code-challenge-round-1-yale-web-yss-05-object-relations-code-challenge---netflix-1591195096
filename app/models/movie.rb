@@ -34,11 +34,5 @@ class Movie
   def self.highest_rated 
     #returns any one movie instance with the highest possible average rating
       self.all.max {|a, b| a.average_rating <=> b.average_rating}
-
-    # highest_possible_rating = self.all.max{|one_movie| one_movie.average_rating}.average_rating 
-    # movie_array_with_max_rating = self.all.select{|one_movie| one_movie.average_rating == highest_possible_rating}
-    # if movie_array_with_max_rating.size == 1 
-    #   return movie_array_with_max_rating[0]
-    # else return movie_array_with_max_rating
   end 
 end
