@@ -9,7 +9,11 @@ end
 # Insert code here to run before hitting the binding.pry
 # This is a convenient place to define variables and/or set up new object instances,
 # so they will be available to test and play around with in your console
-
+alex = Viewer.new("alex")
+bob = Viewer.new("bob")
+movie = Movie.new("title")
+movie2 = Movie.new("title2")
+movie3 = Movie.new("title3")
 
 
 
